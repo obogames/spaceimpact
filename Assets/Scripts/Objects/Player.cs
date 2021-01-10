@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(SpaceEntity))]
+[RequireComponent(typeof(DamageSystem))]
 public class Player : MonoBehaviour
 {
-    SpriteRenderer m_Renderer;
-    public PlayerConfig config;
     public Collider2D arena;
 
-    void Start() 
-    {
-        m_Renderer = GetComponent<SpriteRenderer>();
+    SpaceEntityConfig config;
+    DamageSystem dmg;
 
-        if (m_Renderer == null)
-            Debug.LogError("[Alien] SpriteRenderer missing!");
-        
+    void Start()
+    {
+        config = GetComponent<SpaceEntity>().config;
+        dmg = GetComponent<DamageSystem>();
+
         if (config == null)
-            Debug.LogError("[Alien] Config missing!");
-    }
-
-    void Shoot()
-    {
-        
+            Debug.LogError("[Player] Config missing!");
     }
 
     void SpecialAttack()
@@ -40,14 +35,17 @@ public class Player : MonoBehaviour
 
         Vector2 newPos = transform.position;
 
-        if (Input.GetKeyDown("space"))      Shoot();
+        // Attack type
+        if (Input.GetKeyDown("space"))      dmg.Shoot();
         else if (Input.GetKeyDown("q") 
             || Input.GetKeyDown("e"))       SpecialAttack();
         else if(Input.GetKeyDown("1"))      SwitchSpecial(1); // rockets
         else if(Input.GetKeyDown("2"))      SwitchSpecial(2); // laser
         else if(Input.GetKeyDown("3"))      SwitchSpecial(3); // vertical clear
-        else if (moveV != 0.0f)             newPos.y += moveV * config.SpeedH;
-        else if (moveH != 0.0f)             newPos.x += moveH * config.SpeedV;
+        
+        // Move:
+        if (moveV != 0.0f)             newPos.y += moveV * config.SpeedV * Time.deltaTime;
+        else if (moveH != 0.0f)        newPos.x += moveH * config.SpeedH * Time.deltaTime;
 
         if (arena.bounds.Contains(newPos))
             transform.position = newPos;

@@ -73,7 +73,7 @@ TextureImporter:
     second: enemies_22
   - first:
       213: 13176795997692230
-    second: enemies_23
+    second: boom2
   - first:
       213: 8548960543114135391
     second: enemies_24
@@ -95,6 +95,24 @@ TextureImporter:
   - first:
       213: 1017871411792229582
     second: enemies_30
+  - first:
+      213: -7143632009852538275
+    second: boom1
+  - first:
+      213: -6949527019116515464
+    second: heart
+  - first:
+      213: -7373728255155398809
+    second: cleaner
+  - first:
+      213: -4535217547422562818
+    second: rocket
+  - first:
+      213: 7842233440562819812
+    second: laser
+  - first:
+      213: 8203917247392330234
+    second: bullet
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -230,8 +248,8 @@ TextureImporter:
       name: enemies_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 49
+        x: 87
+        y: 48
         width: 40
         height: 40
       alignment: 0
@@ -273,9 +291,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 121
+        y: 122
         width: 12
-        height: 7
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,9 +312,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 121
+        y: 122
         width: 12
-        height: 7
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,9 +333,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 22
-        y: 121
+        y: 122
         width: 12
-        height: 7
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,9 +354,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 121
+        y: 122
         width: 12
-        height: 7
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,10 +689,10 @@ TextureImporter:
       name: enemies_22
       rect:
         serializedVersion: 2
-        x: 75
-        y: 114
-        width: 7
-        height: 7
+        x: 74
+        y: 113
+        width: 10
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,11 +707,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_23
+      name: boom2
       rect:
         serializedVersion: 2
-        x: 82
-        y: 114
+        x: 104
+        y: 97
         width: 7
         height: 7
       alignment: 0
@@ -852,6 +870,132 @@ TextureImporter:
       bones: []
       spriteID: ec4b6e6f7a4302e00800000000000000
       internalID: 1017871411792229582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 98
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5231ae1988bcdc90800000000000000
+      internalID: -7143632009852538275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 104
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fa49c0ff15e8f90800000000000000
+      internalID: -6949527019116515464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cleaner
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 104
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767933938314ba990800000000000000
+      internalID: -7373728255155398809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocket
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 110
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef582c25babaf01c0800000000000000
+      internalID: -4535217547422562818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 110
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2bf66a3c535dc60800000000000000
+      internalID: 7842233440562819812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 111
+        width: 3
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af13581354b2ad170800000000000000
+      internalID: 8203917247392330234
       vertices: []
       indices: 
       edges: []

@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74986628f0c240245a90d21043caa8ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 97de3b33da943084094a57261a0613e1, type: 3}
   m_Name: Meteor
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 1
   Damage: 0
-  SpeedH: 0
+  SpeedH: 20
   SpeedV: 0
-  Attacks: 0
-  AnimSprites: []
-  AnimSpeed: 0.1
+  AnimSprites:
+  - {fileID: 1961183383047197949, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  - {fileID: -3351989875833439213, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  AnimSpeed: 0.06

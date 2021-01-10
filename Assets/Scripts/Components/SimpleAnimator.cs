@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Alien : MonoBehaviour
+[RequireComponent(typeof(SpaceEntity))]
+public class SimpleAnimator : MonoBehaviour
 {
-    public AlienConfig config;
-    public int SpawnsAt;
-    protected SpriteRenderer m_Renderer;
-    
-    protected void Start() 
+    SpaceEntityConfig config;
+    SpriteRenderer m_Renderer;
+    public bool DestroyAfterLoop = false;
+
+    void Start()
     {
+        config = GetComponent<SpaceEntity>().config;
+
         m_Renderer = GetComponent<SpriteRenderer>();
 
         if (m_Renderer == null)
@@ -20,25 +23,33 @@ public class Alien : MonoBehaviour
         Animate();
     }
 
-    protected void Update()
+    void Update()
     {
         if (config.IsAnimated)
             Animate();
     }
 
-#region Animation
-    protected int frame = 0;
-    protected float timer = 0.0f;
+    int frame = 0;
+    float timer = 0.0f;
 
-    protected void Animate() 
+    void Animate()
     {
         timer += Time.deltaTime;
 
         if (timer >= config.AnimSpeed)
         {
-            // Change frames
             if (frame >= config.AnimSprites.Length)
+            {
+                // Loop resets
                 frame = 0;
+
+                // Destroys object after first loop:
+                if (DestroyAfterLoop)
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+            }
             m_Renderer.sprite = config.AnimSprites[frame];
             frame++;
 
@@ -46,5 +57,4 @@ public class Alien : MonoBehaviour
             timer = timer - config.AnimSpeed;
         }
     }
-#endregion
 }

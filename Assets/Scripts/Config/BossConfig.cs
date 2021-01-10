@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New BossConfig", menuName = "Space Impact/Boss", order = 2)]
-public class BossConfig : AlienConfig
+public class BossConfig : SpaceEntityConfig
 {
 
 }

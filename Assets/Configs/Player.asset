@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b15b4a2db902b439f92d5b5309324b, type: 3}
-  m_Name: Player Normal
+  m_Script: {fileID: 11500000, guid: 36832c73108e20a4b9e965a0b198bace, type: 3}
+  m_Name: Player
   m_EditorClassIdentifier: 
   Health: 3
   Damage: 1
-  SpeedH: 0.2
-  SpeedV: 0.22
+  SpeedH: 30
+  SpeedV: 20
+  AnimSprites:
+  - {fileID: 876784968147787122, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  AnimSpeed: 0.3
