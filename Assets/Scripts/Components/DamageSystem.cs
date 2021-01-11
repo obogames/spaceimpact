@@ -19,13 +19,16 @@ public class DamageSystem : MonoBehaviour
         Health = config.Health;
     }
 
-    public void Shoot()
+    public void Shoot(int? Speed = null)
     {
         var obj = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         var bullet = obj.GetComponent<Bullet>();
         bullet.Owner = name;
         bullet.Damage = config.Damage;
+
+        if (Speed != null)
+            bullet.Speed = (int) Speed;
     }
 
     public bool Hit(int dmg)
@@ -47,12 +50,16 @@ public class DamageSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name.Contains("Bullet"))
+        if (other.gameObject.name != "Bounds")
         {
             int dmg = other.GetComponent<Bullet>().Damage;
 
-            // got hit by a bullet
-            Hit(dmg);
+            // got hit by a bullet or an enemy
+            if (other.gameObject.name.Contains("Bullet"))
+                Hit(dmg);
+            else if (other.gameObject.name.Contains("Player"))
+                // Enemies explode into player
+                Hit(Health);
         }
     }
 }

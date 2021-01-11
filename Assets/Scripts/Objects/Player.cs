@@ -4,6 +4,10 @@
 [RequireComponent(typeof(DamageSystem))]
 public class Player : MonoBehaviour
 {
+    /**
+     * Player controls
+     **/
+
     public Collider2D arena;
 
     SpaceEntityConfig config;
@@ -28,6 +32,12 @@ public class Player : MonoBehaviour
 
     }
     
+    /// GameMessage
+    void msg__Death()
+    {
+        Debug.Log("OOF *yeets away*");
+    }
+
     void Update()
     {
         float moveH = Input.GetAxis ("Horizontal");
