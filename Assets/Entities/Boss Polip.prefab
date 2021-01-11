@@ -35,6 +35,24 @@ PolygonCollider2D:
       - {x: 9.6, y: 19.4}
       - {x: 18.7, y: 14.7}
       - {x: 18.5, y: -19}
+--- !u!114 &138139097514385178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3367588346644382034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13a651a92f008b48a26965b39d46788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arena: {fileID: 0}
+  gui: {fileID: 0}
+  spawner: {fileID: 0}
+  MoveVAmp: 0
+  MoveVFreq: 0
+  MoveVPhase: 0
 --- !u!1001 &7421637053191869722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45,6 +63,10 @@ PrefabInstance:
     - target: {fileID: 5206970780241040456, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_Name
       value: Boss Polip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206970780241040456, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57,22 +79,6 @@ PrefabInstance:
     - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_RootOrder
@@ -94,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2731795287329381114, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+    - target: {fileID: 6171430972590336136, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b47dac3caf0edb408191482937002e5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
 --- !u!1 &3367588346644382034 stripped

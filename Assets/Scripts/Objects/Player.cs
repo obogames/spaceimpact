@@ -7,10 +7,9 @@ public class Player : MonoBehaviour
     /**
      * Player controls
      **/
-
     public Collider2D arena;
     public GUIScript gui;
-    StageComposer stage;
+
 
     SpaceEntityConfig config;
     DamageSystem dmgsys;
@@ -23,7 +22,7 @@ public class Player : MonoBehaviour
         if (config == null)
             Debug.LogError("[Player] Config missing!");
 
-        stage = StageComposer.Instance;
+        //stage = GameStatus.Instance;
     }
 
     void SpecialAttack()
@@ -42,7 +41,7 @@ public class Player : MonoBehaviour
         gui.SetHealth(0);
         Debug.Log("OOF *yeets away*");
 
-        stage.Die();
+        
     }
 
     /// GameMessage

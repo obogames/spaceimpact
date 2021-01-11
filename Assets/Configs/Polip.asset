@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b94371a522895c41aa10e62efaf3663, type: 3}
   m_Name: Polip
   m_EditorClassIdentifier: 
+  Team: 2
   Health: 1
-  Damage: 1
-  SpeedH: 0
-  SpeedV: 0.18
+  Moves: 1
+  SpeedH: 10
+  SpeedV: 0
   AnimSprites:
   - {fileID: 2731795287329381114, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
   - {fileID: 3229708652140166120, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
   AnimSpeed: 0.44
+  Attacks: 1
+  AttackSpeedMin: 0.5
+  AttackSpeedMax: 1.8
+  BulletSpeed: 30
+  Score: 100

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97de3b33da943084094a57261a0613e1, type: 3}
   m_Name: Death
   m_EditorClassIdentifier: 
+  Team: 0
   Health: 0
-  Damage: 0
+  Moves: 1
   SpeedH: 0
   SpeedV: 0
   AnimSprites:

@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New SpaceEntity", menuName = "Space Impact/Space Entity", order = 1)]
 public class SpaceEntityConfig : ScriptableObject
 {
+    public int Team = 2;
+
     [Header("Stats")]
     public int Health = 1;
     public bool Moves = true;

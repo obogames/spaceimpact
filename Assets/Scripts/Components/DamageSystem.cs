@@ -6,6 +6,7 @@ public class DamageSystem : MonoBehaviour
 {
     public int Health { get; private set; }
     public bool MainCharacter { get; private set; }
+    public int Team => config.Team;
     public GameObject death;
 
     public Transform firePoint;
@@ -27,6 +28,7 @@ public class DamageSystem : MonoBehaviour
 
         var bullet = obj.GetComponent<Bullet>();
         bullet.Owner = name;
+        bullet.Team = config.Team;
 
         if (Speed != null)
             bullet.Speed = (int) Speed;
@@ -52,20 +54,28 @@ public class DamageSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        string cname = other.gameObject.name;
-
-        if (cname != "Bounds")
+        if (other.gameObject.name != "Bounds")
         {
-            if (other.TryGetComponent(out Bullet bullet)) 
-            {
-                // Got hit by a bullet
-                if (bullet.Owner == name)
-                    return;
+            int myTeam = config.Team;
 
-                Hit(bullet.Damage);
+            if (other.TryGetComponent(out Bullet bullet))
+            {
+                int yoTeam = bullet.Team;
+
+                // Got hit by a bullet
+                if (myTeam != yoTeam)
+                    Hit(bullet.Damage);
             }
             else
             {
+                if (other.TryGetComponent(out DamageSystem dmgsys))
+                {
+                    int yoTeam = dmgsys.Team;
+
+                    if (myTeam == yoTeam)
+                        return;
+                }
+
                 // Collides with something else
                 Hit(MainCharacter ? 1 : Health);
             }

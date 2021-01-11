@@ -15,10 +15,10 @@ public class SimpleAnimator : MonoBehaviour
         m_Renderer = GetComponent<SpriteRenderer>();
 
         if (m_Renderer == null)
-            Debug.LogError("[Animator] SpriteRenderer missing!");
+            Debug.LogError($"[{name}.Animator] SpriteRenderer missing!");
         
         if (config == null)
-            Debug.LogError("[Animator] Config missing!");
+            Debug.LogError($"[{name}.Animator] Config missing!");
 
         Animate();
     }

@@ -12,10 +12,10 @@ public class Alien : MonoBehaviour
      **/
     public Collider2D arena;
     public GUIScript gui;
-    StageComposer stage;
+    public Spawner spawner;
+    GameStatus stage;
 
     [Space(10)]
-
     public float MoveVAmp = 5f;
     public float MoveVFreq = 1f;
     public float MoveVPhase = 0f;
@@ -33,7 +33,7 @@ public class Alien : MonoBehaviour
 
         m_StatPosition = transform.position;
 
-        stage = StageComposer.Instance;
+        stage = GameStatus.Instance;
 
         ScheduleShoot();
     }
@@ -42,8 +42,13 @@ public class Alien : MonoBehaviour
     void msg__Death() 
     {
         stage.AddScore(config.Score);
-
         gui.SetScore(stage.Score);
+
+        if (config is BossConfig)
+        {
+            // Boss dead -> signal the spawner
+            spawner.BossDead = true;
+        }
     }
 
     /// GameMessage
