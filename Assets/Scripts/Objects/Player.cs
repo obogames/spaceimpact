@@ -9,17 +9,21 @@ public class Player : MonoBehaviour
      **/
 
     public Collider2D arena;
+    public GUIScript gui;
+    StageComposer stage;
 
     SpaceEntityConfig config;
-    DamageSystem dmg;
+    DamageSystem dmgsys;
 
     void Start()
     {
         config = GetComponent<SpaceEntity>().config;
-        dmg = GetComponent<DamageSystem>();
+        dmgsys = GetComponent<DamageSystem>();
 
         if (config == null)
             Debug.LogError("[Player] Config missing!");
+
+        stage = StageComposer.Instance;
     }
 
     void SpecialAttack()
@@ -35,7 +39,17 @@ public class Player : MonoBehaviour
     /// GameMessage
     void msg__Death()
     {
+        gui.SetHealth(0);
         Debug.Log("OOF *yeets away*");
+
+        stage.Die();
+    }
+
+    /// GameMessage
+    void msg__Damage(int dmg)
+    {
+        gui.SetHealth(dmgsys.Health);
+        Debug.Log("-1 HP");
     }
 
     void Update()
@@ -46,7 +60,7 @@ public class Player : MonoBehaviour
         Vector2 newPos = transform.position;
 
         // Attack type
-        if (Input.GetKeyDown("space"))      dmg.Shoot();
+        if (Input.GetKeyDown("space"))      dmgsys.Shoot(config.SpeedH);
         else if (Input.GetKeyDown("q") 
             || Input.GetKeyDown("e"))       SpecialAttack();
         else if(Input.GetKeyDown("1"))      SwitchSpecial(1); // rockets
@@ -57,7 +71,7 @@ public class Player : MonoBehaviour
         if (moveV != 0.0f)             newPos.y += moveV * config.SpeedV * Time.deltaTime;
         else if (moveH != 0.0f)        newPos.x += moveH * config.SpeedH * Time.deltaTime;
 
-        if (arena.bounds.Contains(newPos))
+        //if (arena.bounds.Contains(newPos))
             transform.position = newPos;
     }
 }

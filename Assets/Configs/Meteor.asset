@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Meteor
   m_EditorClassIdentifier: 
   Health: 1
-  Damage: 0
+  Moves: 1
   SpeedH: 10
-  SpeedV: 0
+  SpeedV: 20
   AnimSprites:
   - {fileID: 1961183383047197949, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
   - {fileID: -3351989875833439213, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}

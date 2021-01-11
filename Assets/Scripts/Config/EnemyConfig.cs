@@ -7,6 +7,8 @@ public class EnemyConfig : SpaceEntityConfig
     public bool Attacks = true;
     public float AttackSpeedMin = 0.3f;
     public float AttackSpeedMax = 1f;
-
     public int BulletSpeed = 20;
+
+    [Space]
+    public int Score = 20;
 }

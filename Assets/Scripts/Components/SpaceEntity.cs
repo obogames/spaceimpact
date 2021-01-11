@@ -11,9 +11,11 @@ public class SpaceEntity : MonoBehaviour
             Debug.LogError("[SpaceEntity] Config missing!");
     }
 
-    /// GameMessage
-    void msg__Death()
-    {
 
+    private void Update()
+    {
+        // Went out of the screen
+        if (transform.position.magnitude >= 100f)
+            Destroy(gameObject);
     }
 }

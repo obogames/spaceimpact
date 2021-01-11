@@ -5,7 +5,7 @@ public class SpaceEntityConfig : ScriptableObject
 {
     [Header("Stats")]
     public int Health = 1;
-    public int Damage = 1;
+    public bool Moves = true;
     public int SpeedH = 10;
     public int SpeedV = 18;
 
