@@ -66,19 +66,38 @@ public class Spawner : MonoBehaviour
         {
             // Spawns the next enemy
             enemy_i++;
-            var obj = Instantiate(nextEnemy.Enemy.Prefab, SpawnPoint.position, SpawnPoint.rotation);
+            var config = nextEnemy.Enemy;
+            var obj = Instantiate(config.Prefab, SpawnPoint.position, SpawnPoint.rotation);
 
             if (obj.TryGetComponent(out SpaceEntity se))
-                se.config = nextEnemy.Enemy;
+                se.config = config;
+            else
+                Debug.LogError("[Spawner] Alien has no SpaceEntity component attached!");
 
             if (obj.TryGetComponent(out Alien alien))
             {
+                alien.gameObject.name = $"[{enemy_i}] {config.name}";
+
                 // Sets up Alien script automatically
+                if (alien.spawner == null)
+                    alien.spawner = this;
+
                 if (alien.arena == null)
                     alien.arena = this.arena;
+
                 if (alien.gui == null)
                     alien.gui = this.gui;
+
+                if (alien.config == null)
+                    alien.config = config;
+
+                // Set movement
+                alien.MoveVAmp = nextEnemy.MoveVAmp;
+                alien.MoveVFreq = nextEnemy.MoveVFreq;
+                alien.MoveVPhase = nextEnemy.MoveVPhase;
             }
+            else
+                Debug.LogError("[Spawner] Alien has no Alien component attached!");
         }
     }
 }

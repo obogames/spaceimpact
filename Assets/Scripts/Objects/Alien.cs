@@ -13,6 +13,7 @@ public class Alien : MonoBehaviour
     public Collider2D arena;
     public GUIScript gui;
     public Spawner spawner;
+    public EnemyConfig config;
     GameStatus stage;
 
     [Space(10)]
@@ -23,7 +24,6 @@ public class Alien : MonoBehaviour
     int moveH = -1;
     Vector2 m_StatPosition;
 
-    EnemyConfig config;
     DamageSystem dmg;
 
     void Start()
@@ -41,8 +41,13 @@ public class Alien : MonoBehaviour
     /// GameMessage
     void msg__Death() 
     {
-        stage.AddScore(config.Score);
-        gui.SetScore(stage.Score);
+        if (stage != null)
+        {
+            stage.AddScore(config.Score);
+            gui.SetScore(stage.Score);
+        }
+        else
+            Debug.LogWarning("[Alien] stage element wasn't present in scene!");
 
         if (config is BossConfig)
         {

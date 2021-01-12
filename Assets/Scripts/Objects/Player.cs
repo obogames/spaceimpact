@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Collider2D arena;
     public GUIScript gui;
 
+    public bool CheckArenaBounds = true;
 
     SpaceEntityConfig config;
     DamageSystem dmgsys;
@@ -70,7 +71,7 @@ public class Player : MonoBehaviour
         if (moveV != 0.0f)             newPos.y += moveV * config.SpeedV * Time.deltaTime;
         else if (moveH != 0.0f)        newPos.x += moveH * config.SpeedH * Time.deltaTime;
 
-        //if (arena.bounds.Contains(newPos))
+        if (!CheckArenaBounds || arena.bounds.Contains(newPos))
             transform.position = newPos;
     }
 }
