@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
     {
         [Header("Spawn")]
         public float timeAt;
-        public GameObject Prefab;
+        public EnemyConfig Enemy;
 
         [Header("Movement")]
         public float MoveVAmp;
@@ -66,9 +66,12 @@ public class Spawner : MonoBehaviour
         {
             // Spawns the next enemy
             enemy_i++;
-            var obj = Instantiate(nextEnemy.Prefab, SpawnPoint.position, SpawnPoint.rotation);
+            var obj = Instantiate(nextEnemy.Enemy.Prefab, SpawnPoint.position, SpawnPoint.rotation);
 
-            if (obj.TryGetComponent(out Alien alien)) 
+            if (obj.TryGetComponent(out SpaceEntity se))
+                se.config = nextEnemy.Enemy;
+
+            if (obj.TryGetComponent(out Alien alien))
             {
                 // Sets up Alien script automatically
                 if (alien.arena == null)

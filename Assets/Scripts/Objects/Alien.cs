@@ -49,6 +49,7 @@ public class Alien : MonoBehaviour
             // Boss dead -> signal the spawner
             spawner.BossDead = true;
         }
+
     }
 
     /// GameMessage

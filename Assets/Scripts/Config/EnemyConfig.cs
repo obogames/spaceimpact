@@ -9,6 +9,7 @@ public class EnemyConfig : SpaceEntityConfig
     public float AttackSpeedMax = 1f;
     public int BulletSpeed = 20;
 
-    [Space]
+    [Header("Game")]
+    public GameObject Prefab;
     public int Score = 20;
 }

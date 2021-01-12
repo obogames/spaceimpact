@@ -39,6 +39,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arena: {fileID: 0}
+  gui: {fileID: 0}
+  spawner: {fileID: 0}
+  MoveVAmp: 5
+  MoveVFreq: 1
+  MoveVPhase: 0
 --- !u!1001 &2448416791142538102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48,11 +53,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5206970780241040456, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy Medium
       objectReference: {fileID: 0}
     - target: {fileID: 5206970780241040456, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206970780241040456, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5206970780241040566, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_LocalPosition.x

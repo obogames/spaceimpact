@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28f673ca4a37054e8c515fa66d94a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
+  nextLevel: Stage2
   SpawnPoint: {fileID: 773126885933397223}
-  nextScene: 0
+  arena: {fileID: 0}
+  gui: {fileID: 0}
   enemies: []
