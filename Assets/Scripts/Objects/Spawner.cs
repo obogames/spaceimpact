@@ -6,25 +6,25 @@ using UnityEngine.SceneManagement;
 public class Spawner : MonoBehaviour
 {
     public string nextLevel = "Stage2";
-
-    [Space]
-    public Transform SpawnPoint;
     public Collider2D arena;
     public GUIScript gui;
 
+    [Space]
+    public Transform[] spawns;
+
+    public int debugStartAtEnemy = 0;
+    public int debugEndAtEnemy = 0;
     // @TODO: powerups
 
     [Serializable]
     public struct EnemySpawn
     {
-        [Header("Spawn")]
         public float timeAt;
+        public int spawner;
         public EnemyConfig Enemy;
 
-        [Header("Movement")]
-        public float MoveVAmp;
-        public float MoveVFreq;
-        public float MoveVPhase;
+        [Space(6)]
+        public Vector3 MoveVAmpFreqPhase;
     }
     
     [Space]
@@ -42,13 +42,22 @@ public class Spawner : MonoBehaviour
     public void Setup()
     {
         timer = 0.0f;
-        enemy_i = 0;
+        enemy_i = debugStartAtEnemy;
         BossDead = false;
+
+        if (debugStartAtEnemy > 0)
+        {
+            // fast forward to debugging enemy
+            timer = enemies[debugStartAtEnemy].timeAt - 1f;
+
+            if (debugEndAtEnemy == 0)
+                debugEndAtEnemy = enemies.Length;
+        }
     }
     
     void Update()
     {
-        if (enemy_i >= enemies.Length)
+        if (enemy_i >= debugEndAtEnemy)
         {
             if (BossDead) {
                 // @TODO: wait a bit in a coroutine or sth
@@ -67,6 +76,7 @@ public class Spawner : MonoBehaviour
             // Spawns the next enemy
             enemy_i++;
             var config = nextEnemy.Enemy;
+            var SpawnPoint = spawns[nextEnemy.spawner];
             var obj = Instantiate(config.Prefab, SpawnPoint.position, SpawnPoint.rotation);
 
             if (obj.TryGetComponent(out SpaceEntity se))
@@ -92,9 +102,9 @@ public class Spawner : MonoBehaviour
                     alien.config = config;
 
                 // Set movement
-                alien.MoveVAmp = nextEnemy.MoveVAmp;
-                alien.MoveVFreq = nextEnemy.MoveVFreq;
-                alien.MoveVPhase = nextEnemy.MoveVPhase;
+                alien.MoveVAmp = nextEnemy.MoveVAmpFreqPhase.x;
+                alien.MoveVFreq = nextEnemy.MoveVAmpFreqPhase.y;
+                alien.MoveVPhase = nextEnemy.MoveVAmpFreqPhase.z;
             }
             else
                 Debug.LogError("[Spawner] Alien has no Alien component attached!");

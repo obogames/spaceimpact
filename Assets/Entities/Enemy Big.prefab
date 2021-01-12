@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3879624175460928664
+--- !u!1001 &6077241679823856258
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,20 +8,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_Size.x
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_Offset.y
@@ -29,11 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087567040, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
-      propertyPath: m_AutoTiling
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5188461562300926666, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45,11 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7617951259894222654, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_Name
-      value: Enemy Small
-      objectReference: {fileID: 0}
-    - target: {fileID: 7617951259894222654, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: Enemy Big
       objectReference: {fileID: 0}
     - target: {fileID: 7617951259894222784, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,6 +90,6 @@ PrefabInstance:
     - target: {fileID: 7617951259894222785, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 414078030284958077, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+      objectReference: {fileID: 4120149006412595196, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}

@@ -22,7 +22,7 @@ public class Alien : MonoBehaviour
     public float MoveVPhase = 0f;
 
     int moveH = -1;
-    Vector2 m_StatPosition;
+    //Vector2 m_StartPosition;
 
     DamageSystem dmg;
 
@@ -31,7 +31,7 @@ public class Alien : MonoBehaviour
         config = GetComponent<SpaceEntity>().config as EnemyConfig;
         dmg = GetComponent<DamageSystem>();
 
-        m_StatPosition = transform.position;
+        //m_StartPosition = transform.position;
 
         stage = GameStatus.Instance;
 

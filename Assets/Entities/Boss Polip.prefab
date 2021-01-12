@@ -50,6 +50,7 @@ MonoBehaviour:
   arena: {fileID: 0}
   gui: {fileID: 0}
   spawner: {fileID: 0}
+  config: {fileID: 0}
   MoveVAmp: 0
   MoveVFreq: 0
   MoveVPhase: 0
@@ -104,6 +105,10 @@ PrefabInstance:
       propertyPath: config
       value: 
       objectReference: {fileID: 11400000, guid: 3b47dac3caf0edb408191482937002e5, type: 2}
+    - target: {fileID: 7636865081653858748, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
 --- !u!1 &3367588346644382034 stripped

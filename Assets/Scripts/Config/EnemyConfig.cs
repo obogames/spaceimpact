@@ -11,5 +11,5 @@ public class EnemyConfig : SpaceEntityConfig
 
     [Header("Game")]
     public GameObject Prefab;
-    public int Score = 20;
+    public int Score = 10;
 }

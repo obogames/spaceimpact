@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 268ae0ee9111f5a4fa92fc92ba441217, type: 3}
-  m_Name: Meteor
+  m_Name: EvilShip2
   m_EditorClassIdentifier: 
   Team: 2
   Health: 1
   Moves: 1
-  SpeedH: 10
-  SpeedV: 0
+  SpeedH: 20
+  SpeedV: 18
   AnimSprites:
-  - {fileID: 1961183383047197949, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
-  - {fileID: -3351989875833439213, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
-  AnimSpeed: 0.08
-  Attacks: 0
-  AttackSpeedMin: 0
-  AttackSpeedMax: 0
-  BulletSpeed: 0
+  - {fileID: -3231492579343523708, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  - {fileID: -8384590935982494654, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  AnimSpeed: 0
+  Attacks: 1
+  AttackSpeedMin: 0.6
+  AttackSpeedMax: 1.2
+  BulletSpeed: 38
   Prefab: {fileID: 7617951259894222654, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
   Score: 10

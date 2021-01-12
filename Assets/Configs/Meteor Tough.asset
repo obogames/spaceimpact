@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 268ae0ee9111f5a4fa92fc92ba441217, type: 3}
-  m_Name: Meteor
+  m_Name: Meteor Tough
   m_EditorClassIdentifier: 
   Team: 2
-  Health: 1
+  Health: 5
   Moves: 1
-  SpeedH: 10
+  SpeedH: 16
   SpeedV: 0
   AnimSprites:
   - {fileID: 1961183383047197949, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
@@ -26,4 +26,4 @@ MonoBehaviour:
   AttackSpeedMax: 0
   BulletSpeed: 0
   Prefab: {fileID: 7617951259894222654, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
-  Score: 10
+  Score: 25

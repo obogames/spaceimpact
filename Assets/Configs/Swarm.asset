@@ -9,20 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b94371a522895c41aa10e62efaf3663, type: 3}
-  m_Name: Polip
+  m_Script: {fileID: 11500000, guid: 268ae0ee9111f5a4fa92fc92ba441217, type: 3}
+  m_Name: Swarm
   m_EditorClassIdentifier: 
   Team: 2
   Health: 1
   Moves: 1
   SpeedH: 10
-  SpeedV: 0
+  SpeedV: 18
   AnimSprites:
-  - {fileID: 2731795287329381114, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
-  - {fileID: 3229708652140166120, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
-  AnimSpeed: 0.44
+  - {fileID: 414078030284958077, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  AnimSpeed: 0
   Attacks: 1
-  AttackSpeedMin: 0.5
-  AttackSpeedMax: 1.8
-  BulletSpeed: 30
-  Score: 100
+  AttackSpeedMin: 0.3
+  AttackSpeedMax: 1
+  BulletSpeed: 20
+  Prefab: {fileID: 6660639056879272870, guid: 5e8724f07df080b49b4667f4ef064805, type: 3}
+  Score: 10

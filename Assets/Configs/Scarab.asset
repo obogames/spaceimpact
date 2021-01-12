@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 268ae0ee9111f5a4fa92fc92ba441217, type: 3}
-  m_Name: Meteor
+  m_Name: Scarab
   m_EditorClassIdentifier: 
   Team: 2
   Health: 1
   Moves: 1
   SpeedH: 10
-  SpeedV: 0
+  SpeedV: 18
   AnimSprites:
-  - {fileID: 1961183383047197949, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
-  - {fileID: -3351989875833439213, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
-  AnimSpeed: 0.08
-  Attacks: 0
-  AttackSpeedMin: 0
-  AttackSpeedMax: 0
-  BulletSpeed: 0
-  Prefab: {fileID: 7617951259894222654, guid: a14116d79fa1081479e6e702235ad4c4, type: 3}
+  - {fileID: -7994963395263852509, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  - {fileID: 911881859052452035, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+  AnimSpeed: 0.52
+  Attacks: 1
+  AttackSpeedMin: 0.3
+  AttackSpeedMax: 1
+  BulletSpeed: 20
+  Prefab: {fileID: 4462738841251704252, guid: d777de3553bc14e4cad38549aac33448, type: 3}
   Score: 10

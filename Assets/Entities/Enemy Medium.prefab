@@ -41,6 +41,7 @@ MonoBehaviour:
   arena: {fileID: 0}
   gui: {fileID: 0}
   spawner: {fileID: 0}
+  config: {fileID: 0}
   MoveVAmp: 5
   MoveVFreq: 1
   MoveVPhase: 0
@@ -111,6 +112,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1961183383047197949, guid: 0042b106d919f3a4db210b00d7f0712c, type: 3}
+    - target: {fileID: 7636865081653858748, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636865081653858748, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8242280337491269859, guid: 1406dda6c6460d147910b4349d4edaaa, type: 3}
       propertyPath: m_IsActive
       value: 1
